@@ -3,3 +3,8 @@
   margin: auto;
   display: block;
 }
+
+.ui-text {
+  display: flex;
+  justify-content: space-around;
+}
