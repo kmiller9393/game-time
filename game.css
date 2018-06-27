@@ -1,4 +1,9 @@
+body {
+  background-color: green;
+}
+
 #game {
+  background-color: #fff;
   border: 1px dashed;
   margin: auto;
   display: block;
