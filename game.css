@@ -1,5 +1,10 @@
 body {
-  background-color: green;
+  background-image: url('images/snake-background.jpg');
+  font-family: 'Bangers', cursive;
+}
+
+h1 {
+  text-align: center;
 }
 
 #game {
