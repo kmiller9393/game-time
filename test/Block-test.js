@@ -8,7 +8,7 @@ describe('Block', function() {
     });
 
   it('should have a height', function() {
-    let blocky = new Block(es);
+    let blocky = new Block(20);
     assert.deepEqual(blocky.height, 20)
   })
 });
