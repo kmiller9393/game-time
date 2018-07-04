@@ -8,6 +8,11 @@ h1 {
   text-align: center;
 }
 
+.ui-text {
+  display: flex;
+  justify-content: space-around;
+}
+
 #game {
   background-color: #fff;
   border: 1px solid black;
@@ -15,7 +20,11 @@ h1 {
   display: block;
 }
 
-.ui-text {
+.button-container {
   display: flex;
   justify-content: center;
+}
+
+.increase-difficulty {
+  width: 5rem;
 }

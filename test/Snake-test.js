@@ -1,31 +1,27 @@
 const { assert } = require('chai');
 const Snake = require('../lib/Snake.js');
+const Apple = require('../lib/Apple.js')
 
 describe('Snake', function() {
 
-it('should be able to collide with apple', function() {
-   const newSnake = new Snake(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-   const newApple = new GamePiece(58, 58, 10, 10, 'rgb(250, 0, 0)', 1);
+it('should instantiate a new snake with 5 body parts', function() {
+ let snake = new Snake()
+ snake.createSnake();
+ assert.deepEqual(snake.body.length, 5)
+})
 
-   const isColliding = gamePiece1.isCollidingWith(gamePiece2);
+it.only('should be able grow when eats apple', function() {
+  const newSnake = new Snake(0, 0);
+  const apple = new Apple();
+  apple.x = 80;
+  apple.y = 0;
 
-   assert.isTrue(isColliding);
- })
+  newSnake.createSnake();
+  let snakeLength = newSnake.body.length;
+  newSnake.moveSnake();
+  newSnake.eatApple(apple);
 
- it.skip('should not collide with objects when they dont overlap', function() {
-   const gamePiece1 = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-   const gamePiece2 = new GamePiece(65, 65, 10, 10, 'rgb(250, 0, 0)', 1);
-
-   const isColliding = gamePiece1.isCollidingWith(gamePiece2);
-
-   assert.isFalse(isColliding);
- })
- 
- it.skip('should move', function() {
-   const gamePiece1 = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-   
-   gamePiece1.move();
-
-   assert.equal(gamePiece1.x, 50.5);
- })
+  assert.equal(newSnake.score, 1);
+  assert.deepEqual(newSnake.body.length, snakeLength +1);
+})
 })
