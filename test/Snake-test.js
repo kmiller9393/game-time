@@ -24,4 +24,13 @@ it.only('should be able grow when eats apple', function() {
   assert.equal(newSnake.score, 1);
   assert.deepEqual(newSnake.body.length, snakeLength +1);
 })
+
+it('should be able to move', function() {
+ const newSnake = new Snake(0, 0);
+ newSnake.createSnake();
+ newSnake.tail = newSnake.body.shift();
+ newSnake.head = newSnake.body[newSnake.body.length - 1];
+
+ assert.deepEqual(newSnake.head.x, 80);
+})
 })
