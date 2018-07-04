@@ -2,6 +2,8 @@
 
 Basic Game Time starter kit.
 
+Game Time To-Do List/Issues: https://trello.com/b/JEYrvq9H/game-time
+
 ## Initial Setup
 
 One person from your project will sets up the repository. That one person should follow these steps:
