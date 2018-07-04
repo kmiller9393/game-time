@@ -8,6 +8,21 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  color: #f7f7f7;
+  font-size: 1.6rem;
+  position: relative;
+  bottom: 400px;
+  left: 25px;
+  text-align: left;
+}  
+
+img {
+  bottom: 410px;
+  left: 70px;
+  position: relative;
+}
+
 .ui-text {
   display: flex;
   justify-content: space-around;
@@ -20,11 +35,15 @@ h1 {
   display: block;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
+.increase-difficulty {
+  margin-top: 1rem;
+  width: 5rem;
 }
 
-.increase-difficulty {
-  width: 5rem;
+.score-header {
+  padding-left: 8.7rem;
+}
+
+.level-header {
+  padding-right: 9rem;
 }
