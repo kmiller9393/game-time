@@ -10,7 +10,7 @@ it('should instantiate a new snake with 5 body parts', function() {
  assert.deepEqual(snake.body.length, 5)
 })
 
-it.only('should be able grow when eats apple', function() {
+it('should be able grow when eats apple', function() {
   const newSnake = new Snake(0, 0);
   const apple = new Apple();
   apple.x = 80;
@@ -33,4 +33,28 @@ it('should be able to move', function() {
 
  assert.deepEqual(newSnake.head.x, 80);
 })
+
+it('should die when it collides into itself', function() {
+  const newSnake = new Snake(0, 0);
+  newSnake.createSnake();
+  newSnake.moveSnake();
+  newSnake.direction = 'up';
+  newSnake.moveSnake();
+  newSnake.direction = 'left';
+  newSnake.moveSnake();
+  newSnake.direction = 'down';
+  newSnake.moveSnake();
+  newSnake.direction = 'right';
+  newSnake.collideIntoSelf();
+  newSnake.head.x === newSnake.body[0].x;
+  assert.equal(newSnake.isGameOver, true);
+  })
+
+it.skip('should die when collides into wall', function(){
+  const newSnake = new Snake(0, 0);
+  newSnake.createSnake();
+  newSnake.head = newSnake.body[this.body.length - 1];
+
+ 
+  newSnake  })
 })
