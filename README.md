@@ -8,6 +8,10 @@ Game Time is an application where the user can play the classic game of Snake. T
 
 `git clone https://github.com/kmiller9393/game-time.git`
 
+#### Then:
+
+`cd game-time`
+
 #### Then Run:
 
 `npm install`
@@ -15,6 +19,10 @@ Game Time is an application where the user can play the classic game of Snake. T
 #### Then Run:
 
 `npm start`
+
+#### To Play:
+
+Go to where project is running in your browser, this should be http://localhost:8080/ by default.
 
 ## Overview:
 
